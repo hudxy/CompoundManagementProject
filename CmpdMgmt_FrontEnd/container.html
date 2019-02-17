@@ -1,75 +1,146 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Container Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Container Page</title>
 </head>
+
 <body>
+    <!--Navigation bar-->
+    <nav class="navbar navbar-expand-lg sticky-top" style="background-color: black">
+            <!-- Logo -->
+            <div class="navbar-header"> 
+                <a class="navbar-brand" href="#">
+                    <img src="Images/chemicalFlask.png" width="50" height="50" alt="chemical logo">
+                </a>
+            </div>
 
-    <h1>Add Container</h1>
-    <form id = "form_AddContainer">
-        Container Barcode: </br>
-        <input type = "text" name = "containerBarcode" id = "containerBarcode"> </br></br>
-        Container Type ID: </br>
-        <!--Populate the options based on what container types are registered in the database-->
-        <select name="containerType">
-            <option value="rackOne">Container Type One</option>
-            <option value="rackTwo">Container Type Two</option>
-        </select> </br></br>
-        Concentration: </br>
-        <input type = "number" name = "concentration" id = "concentration"> uM </br></br>
-        Amount: </br>
-        <input type = "number" name = "amount" id = "amount"> uL </br></br>
-        <input type = "submit" value = "Submit" id = "submit_addContainer">
-    </form></br>
+            <!-- Menu Items-->
+            <div>
+                <ul class="navbar-nav">
+                    <li class="nav-item active"> 
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="chemical.html">Chemical</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="container.html">Container</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="rack.html">Rack</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="containerType.html">Container Type</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="rackType.html">Rack Type</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>    
 
-    <h1>Update Container</h1>
-    <form id = "form_UpdateContainer">
-        Container Barcode: </br>
-        <input type = "text" name = "containerBarcode" id = "containerBarcode"> </br></br>
-        Container Type ID: </br>
-        <!--Populate the options based on what container types are registered in the database-->
-        <select name="containerType">
-            <option value="rackOne">Container Type One</option>
-            <option value="rackTwo">Container Type Two</option>
-        </select> </br></br>
-        Concentration: </br>
-        <input type = "number" name = "concentration" id = "concentration"> uM </br></br>
-        Amount: </br>
-        <input type = "number" name = "amount" id = "amount"> uL </br></br>
-        <input type = "submit" value = "Submit" id = "submit_UpdateContainer">
-    </form></br>
+    <div class="jumbotron">
+            <div class = "container">
+                <h1 class ="display-4">Container</h1>
+            </div>
+        </div>
+    </div>
 
-    <h1>Delete Container</h1>
-    <form id = "form_deleteContainer">
-        Please enter the container barcode you would like to remove. </br></br>
-        Container Barcode: </br>
-        <input type = "text" name = "deleteContainer" id = "deleteContainer"> </br></br>
-    </form>
+    <div class = "container">
+        <div class = "row">
+            <div class = "col-4 mx-auto mt-1" id = "formContainer">
+                <form id = "form_AddContainer">
+                    <h1>Add Container</h1>
+                    <p>Please enter the information below to add a new container.</p>
+                    Container Barcode: </br>
+                    <input type = "text" name = "containerBarcode" id = "containerBarcode"> </br></br>
+                    Container Type ID: </br>
+                    <!--Populate the options based on what container types are registered in the database-->
+                    <select name="containerType">
+                        <option value="rackOne">Container Type One</option>
+                        <option value="rackTwo">Container Type Two</option>
+                    </select> </br></br>
+                    Concentration: </br>
+                    <input type = "number" name = "concentration" id = "concentration"> uM </br></br>
+                    Amount: </br>
+                    <input type = "number" name = "amount" id = "amount"> uL </br></br>
+                    <input type = "submit" value = "Add" id = "submit_addContainer">
+                </form></br>
+            </div>
 
-    <h1>Container Inventory </h1>
-    <!--Example table-->
-    <table id = "table_containerInventory" border = 1px solid black>
-        <tr>
-            <th>Container Barcode</th>
-            <th>Chemical</th>
-            <th>Concentration (uM)</th>
-            <th>Amount (uL)</th>
-        </tr> 
-        <tr>
-            <td>03020350101</td>
-            <td>HL000001</td>
-            <td>6000</td>
-            <td>400</td>
-        </tr>
-        <tr>
-            <td>03342234341</td>
-            <td>HL000002</td>
-            <td>4000</td>
-            <td>250</td>
-        </tr>
-    </table></br>
+            <div class = "col-4 mx-auto mt-1" id = "formContainer">
+                <form id = "form_UpdateContainer">
+                    <h1>Edit Container</h1>
+                    <p>Please enter the container barcode and the field you would like to edit</p>
+                    Container Barcode: </br>
+                    <input type = "text" name = "containerBarcode" id = "containerBarcode"> </br></br>
+                    Container Type ID: </br>
+                    <!--Populate the options based on what container types are registered in the database-->
+                    <select name="containerType">
+                        <option value="rackOne">Container Type One</option>
+                        <option value="rackTwo">Container Type Two</option>
+                    </select> </br></br>
+                    Concentration: </br>
+                    <input type = "number" name = "concentration" id = "concentration"> uM </br></br>
+                    Amount: </br>
+                    <input type = "number" name = "amount" id = "amount"> uL </br></br>
+                    <input type = "submit" value = "Edit" id = "submit_UpdateContainer">
+                </form></br>
+            </div>
 
-    <a href = "index.html">Home</a>
+            <div class = "col-4 mx-auto mt-1" id = "formContainer">
+                <form id = "form_deleteContainer">
+                    <h1>Delete Container</h1>
+                    <p>Please enter the container barcode you would like to remove.</p>
+                    Container Barcode: </br>
+                    <input type = "text" name = "deleteContainer" id = "deleteContainer"> </br></br>
+                    <input type = "submit" value = "Delete" id = submit_DeleteContainer>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    </br>
+
+    <div class = "container">
+        <div class = "row justify-content-center">
+            <h1>Container Inventory </h1>
+            <p>This is an example table. If the user adds a container, it will show the newly added container and 20 of the most recent added containers. If the user edits a container, it will show a table with the edited container. If the user deletes a container, it will show text saying the container barcode has been removed from the database.</p>
+        </div>
+        <div class = "row justify-content-center">
+            <!--Example table-->
+            <table id = "table_containerInventory" border = "1px solid black">
+                <tr>
+                    <th>Container Barcode</th>
+                    <th>Chemical</th>
+                    <th>Concentration (uM)</th>
+                    <th>Amount (uL)</th>
+                </tr> 
+                <tr>
+                    <td>HL0000002</td>
+                    <td>Chemical 1</td>
+                    <td>6000</td>
+                    <td>400</td>
+                </tr>
+                <tr>
+                    <td>HL0000003</td>
+                    <td>Chemical 2</td>
+                    <td>4000</td>
+                    <td>250</td>
+                </tr>
+            </table></br>
+        </div>
+    </div>
+    </br>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 </body>
 </html>

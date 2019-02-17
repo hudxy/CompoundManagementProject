@@ -1,62 +1,51 @@
 .nav-link{
-	color: #268491;
+	color:white;
 	font-family:'Roboto', sans-serif;
 	font-size: x-large;
 	font-weight: 550;
 	text-align: center;
 }
 
-.scrollBox{
-	width:auto;
-	height:191px;
-	overflow: scroll;
-	background-color: #E9ECEF;
+.card-img-top {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+}
+
+.card-text {
+	color: black;
+	font-family:'Roboto', sans-serif;
+	font-size: x-large;
+	font-weight: 550;
+	text-align: center;
 }
 
 .display-4{
-	color: #268491;
+	color: black;
 	font-family:'Roboto', sans-serif;
 	text-align: center;
-}
-
-#headerQueue{
-	color: #268491;
-	font-family:'Roboto', sans-serif;
-	text-align: center;
-}
-
-#headerMap{
-	color: #268491;
-	font-family:'Roboto', sans-serif;
-	text-align: center;
-}
-
-#headerInfo{
-	color: #268491;
-	font-family:'Roboto', sans-serif;
-	text-align: center; 
-}
-
-#formContainer{
-	border-color: #268491;
-	border-style:solid;
-	border-width: 2px;
-	padding-top: 20px;
 }
 
 .jumbotron{
-	color: #268491;
+	background-color: white;
 	font-family:'Roboto', sans-serif;
 	text-align: center;
 }
 
 .card-text{
-	color: #268491;
+	color: black;
 	font-family:'Roboto', sans-serif;
 	text-align: center;
 }
 
 .explore{
-	color: #268491;
+	color: white;
 	text-align: center;
+}
+
+#formContainer{
+	border-color: black;
+	border-style: solid;
+	border-width: 2.5px;
+	padding-top: 10px;
 }

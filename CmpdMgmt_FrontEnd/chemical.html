@@ -1,56 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Chemical Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">   
+    <title>Chemical Page</title>
 </head>
+
 <body>
 
+     <!--Navigation bar-->
+     <nav class="navbar navbar-expand-lg sticky-top" style="background-color: black">
+            <!-- Logo -->
+            <div class="navbar-header"> 
+                <a class="navbar-brand" href="#">
+                    <img src="Images/chemicalFlask.png" width="50" height="50" alt="chemical logo">
+                </a>
+            </div>
+
+            <!-- Menu Items-->
+            <div>
+                <ul class="navbar-nav">
+                    <li class="nav-item active"> 
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="chemical.html">Chemical</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="container.html">Container</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="rack.html">Rack</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="containerType.html">Container Type</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="rackType.html">Rack Type</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>    
+
+    <div class="jumbotron">
+			<div class = "container">
+				<h1 class ="display-4">Chemical</h1>
+			</div>
+        </div>
+    </div>
+
     <!--Add new chemical-->
-    <h1>Add Chemical</h1>
-    <form id = "form_AddChemical">
-        Chemical Name: </br>
-        <input type = "text" name = "chemicalName" id = "chemicalName"> </br></br>
-        Chemical Formula: </br>
-        <input type = "text" name = "chemicalFormula" id = "chemicalFormula"> </br></br>
-        Molecular Weight: </br>
-        <input type = "number" name = "molecularWeight" id = "molecularWeight"> </br></br>
-        <input type = "submit" value = "Submit" id = "submit_addChemical">
-    </form></br>
+    <div class = "container">
+        <div class = "row">
+            <div class = "col-4 mx-auto mt-1" id = "formContainer">
+                <form id = "form_AddChemical">
+                    <h1>Register New Chemical</h1>
+                    <p>Please enter the information below to register a new chemical and which container you filled it in. </p>
+                    Chemical Name: </br>
+                    <input type = "text" name = "chemicalName" id = "chemicalName"> </br></br>
+                    Chemical Formula: </br>
+                    <input type = "text" name = "chemicalFormula" id = "chemicalFormula"> </br></br>
+                    Molecular Weight: </br>
+                    <input type = "number" name = "molecularWeight" id = "molecularWeight"> </br></br>
+                    Container Barcode: <br>
+                    <input type = "text" name = "newContainerBarcode" id = newContainerBarcode> </br></br> 
+                    <input type = "Submit" value = "Register" id = "submit_addChemical">
+                </form></br>
+            </div>
+            <!--Search chemical in database based on chemical name or chemical formula-->
+            <div class = "col-4 mx-auto mt-1" id = "formContainer">
+                <form id = "form_SearchContainer">
+                    <h1>Chemical Inventory Search</h1>
+                    <p>Enter a chemical name or chemical formula to view inventory.</p>
+                    Chemical Name: </br>
+                    <input type = "text" name = "searchName" id = "searchName"> </br></br>
+                    Chemical Formula: </br>
+                    <input type = "text" name = "searchFormula" id = "searchFormula"></br></br>
+                    <input type = "submit" value = "Search" id = "submit_SearchContainer">
+                </form></br>
+            </div>
+            <div class = "col-4 mx-auto mt-1" id = "formContainer">
+                    <form id = "form_AddContainer">
+                        <h1>Move Chemical</h1>
+                        <p>Enter chemical id to move into a container.</p>
+                        Chemical ID: </br>
+                        <input type = "text" name = "movdChemicalID" id = "moveChemicalID"> </br></br>
+                        Container Barcode: </br>
+                        <input type = "text" name = "moveContainerBarocde" id = "moveContainerBarcode"></br></br>
+                        <input type = "submit" value = "Move" id = "submit_moveChemical">
+                    </form></br>
+                </div>
+        </div>
+    </div>
 
-    <!--Search chemical in database based on chemical name or chemical formula-->
-    <h1>Chemical Search</h1>
-    <form id = "form_AddContainer">
-        Chemical Name: </br>
-        <input type = "text" name = "searchName" id = "searchName"> </br></br>
-        Chemical Formula: </br>
-        <input type = "text" name = "searchFormula" id = "searchFormula"></br></br>
-        <input type = "submit" value = "Submit" id = "submit_addContainer">
-    </form></br>
+    </br>
+    
+    <div class = "container">
+        <div class = "row justify-content-center">
+            <h1>Chemical Inventory</h1>
+            <p>
+                This is an example table. If the user registers a new compound, it will display a table with the newly registered
+                compound along with the 20 most recent registered compounds. If the user searches a chemical, it will show a table
+                of the searched chemical and what container it is in. 
+        </div>
+        <div class = "row justify-content-center">
+            <!--Example table-->
+            <table id = "table_chemicalInventory" border = "1px solid black">
+                <tr>
+                    <th>Chemical ID</th>
+                    <th>Chemical Name</th>
+                    <th>Chemical Formula</th> 
+                    <th>Molecular Weight</th>
+                    <th>Container Barcode</th>
+                    <th>Concentration (uM)</th>
+                    <th>Amount (uL)</th>
+                    <th>Rack Barcode</th>
+                    <th>Rack Location</th>
+                </tr> 
+                <tr>
+                    <td>Chemical 1</td>
+                    <td>Acetic acid</td>
+                    <td>CH3COOH</td>
+                    <td>60.052</td>
+                    <td>HL0000001</td> 
+                    <td>6000</td>
+                    <td>450</td>
+                    <td>RK0000001</td>
+                    <td>A1</td> 
+                </tr>
+                <tr>
+                    <td>Chemical 2</td>
+                    <td>Acetone</td>
+                    <td>CH3COCH3</td>
+                    <td>58.080</td>
+                    <td>HL0000002</td>
+                    <td>2000</td>
+                    <td>250</td> 
+                    <td>RK0000001</td> 
+                    <td>A2</td>
+                </tr>
+            </table></br>
+        </div>  
+    </div>
 
-    <h1>Chemical Inventory</h1>
-    <!--Example table-->
-    <table id = "table_chemicalInventory" border = 1px solid black>
-        <tr>
-            <th>Chemical ID</th>
-            <th>Chemical Name</th>
-            <th>Chemical Formula</th> 
-            <th>Molecular Weight</th>
-        </tr> 
-        <tr>
-            <td>Chemical 1</td>
-            <td>Acetic acid</td>
-            <td>CH3COOH</td>
-            <td>60.052</td>
-        </tr>
-        <tr>
-            <td>Chemical 2</td>
-            <td>Acetone</td>
-            <td>CH3COCH3</td>
-            <td>58.080</td>
-        </tr>
-    </table></br>
+    </br>
 
-    <a href = "index.html">Home</a>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
 </body>
 </html>

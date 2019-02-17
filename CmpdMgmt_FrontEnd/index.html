@@ -12,7 +12,7 @@
 <body>
 
     <!--Navigation bar-->
-    <nav class="navbar navbar-expand-lg sticky-top" style="background-color: white">
+    <nav class="navbar navbar-expand-lg sticky-top" style="background-color: black">
             <!-- Logo -->
             <div class="navbar-header"> 
                 <a class="navbar-brand" href="#">
@@ -52,45 +52,64 @@
         </div>
     </div>
 
-    <h1>Compound Management Database</h1>
-    Please choose from the following options
-    
-    <!--List of all entity pages-->
-    <div id = "entityPages"> </br>
-        <a href = "chemical.html">Chemical</a></br>
-        The chemical page is where all the different functions for chemicals can be found. </br></br> 
-            Functions: </br>
-            -Add chemical </br> 
-            -Search chemical in inventory </br>
-            -View chemical inventory </br>
+    <div class="container">
+        <div class = "row">
+            <div class="col-6 mx-auto mt-1">
+                <div class = "card border-dark">
+                    <img class = "card-img-top" src="Images/chemicals.jpg" id = "chemicalPicture">
+                    <div class="card-body">
+                        <p class="card-text">Chemical</p>
+                    </div>
+                </div>
+            </div>    
+        </div>
         </br>
-        <a href = "container.html">Container</a></br>
-        The container page is where all the different functions for containers can be found. </br></br> 
-        Functions: </br>
-            -Add container </br> 
-            -Search container in inventory </br>
-            -Update container </br>
-            -Delete container </br>
+        <div class="row">
+            <div class="col-6 mx-auto mt-1">
+                <div class = "card border-dark">
+                    <img class = "card-img-top" src="Images/container.jpg" id = "containerPicture">
+                    <div class="card-body">
+                        <p class="card-text">Container</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mx-auto mt-1">
+                <div class = "card border-dark">
+                    <img class = "card-img-top" src="Images/containerTypes.jpg" id = "containerTypePicture">
+                    <div class="card-body">
+                        <p class="card-text">Container Type</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         </br>
-        <a href = "rack.html">Rack</a> </br>
-        The rack page is where all the different functions for racks can be found. </br></br> 
-            Functions: </br>
-                -Add rack </br> 
-                -Display contents inside rack and how many cells are occupied </br>
-        </br>
-        <a href = "containerType.html">Container Type</a> </br> 
-        The container type page is where all the different functions for container types can be found. </br></br> 
-            Functions: </br>
-                -Add container type </br> 
-                -Display table of all container types </br>
-        </br>
-        <a href = "rackType.html">Rack Type</a> </br> 
-        The rack type page is where all the different functions for rack types can be found. </br></br> 
-            Functions: </br>
-                -Add rack type </br> 
-                -Display all rack types </br>
-        </br>
+        <div class = "row">
+            <div class="col-6 mx-auto mt-1">
+                <div class = "card border-dark">
+                    <img class = "card-img-top" src="Images/rack.PNG" id = "rackPicture">
+                    <div class="card-body">
+                        <p class="card-text">Rack</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mx-auto mt-1">
+                <div class = "card border-dark">
+                    <img class = "card-img-top" src="Images/rackType.jpg" id = "rackTypePicture">
+                    <div class="card-body">
+                        <p class="card-text">Rack Type</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    </br>
+    </br>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
