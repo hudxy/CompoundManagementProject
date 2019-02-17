@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Container Page</title>
+</head>
+<body>
+
+    <h1>Add Container</h1>
+    <form id = "form_AddContainer">
+        Container Barcode: </br>
+        <input type = "text" name = "containerBarcode" id = "containerBarcode"> </br></br>
+        Container Type ID: </br>
+        <!--Populate the options based on what container types are registered in the database-->
+        <select name="containerType">
+            <option value="rackOne">Container Type One</option>
+            <option value="rackTwo">Container Type Two</option>
+        </select> </br></br>
+        Concentration: </br>
+        <input type = "number" name = "concentration" id = "concentration"> uM </br></br>
+        Amount: </br>
+        <input type = "number" name = "amount" id = "amount"> uL </br></br>
+        <input type = "submit" value = "Submit" id = "submit_addContainer">
+    </form></br>
+
+    <h1>Update Container</h1>
+    <form id = "form_UpdateContainer">
+        Container Barcode: </br>
+        <input type = "text" name = "containerBarcode" id = "containerBarcode"> </br></br>
+        Container Type ID: </br>
+        <!--Populate the options based on what container types are registered in the database-->
+        <select name="containerType">
+            <option value="rackOne">Container Type One</option>
+            <option value="rackTwo">Container Type Two</option>
+        </select> </br></br>
+        Concentration: </br>
+        <input type = "number" name = "concentration" id = "concentration"> uM </br></br>
+        Amount: </br>
+        <input type = "number" name = "amount" id = "amount"> uL </br></br>
+        <input type = "submit" value = "Submit" id = "submit_UpdateContainer">
+    </form></br>
+
+    <h1>Delete Container</h1>
+    <form id = "form_deleteContainer">
+        Please enter the container barcode you would like to remove. </br></br>
+        Container Barcode: </br>
+        <input type = "text" name = "deleteContainer" id = "deleteContainer"> </br></br>
+    </form>
+
+    <h1>Container Inventory </h1>
+    <!--Example table-->
+    <table id = "table_containerInventory" border = 1px solid black>
+        <tr>
+            <th>Container Barcode</th>
+            <th>Chemical</th>
+            <th>Concentration (uM)</th>
+            <th>Amount (uL)</th>
+        </tr> 
+        <tr>
+            <td>03020350101</td>
+            <td>HL000001</td>
+            <td>6000</td>
+            <td>400</td>
+        </tr>
+        <tr>
+            <td>03342234341</td>
+            <td>HL000002</td>
+            <td>4000</td>
+            <td>250</td>
+        </tr>
+    </table></br>
+
+    <a href = "index.html">Home</a>
+
+</body>
+</html>

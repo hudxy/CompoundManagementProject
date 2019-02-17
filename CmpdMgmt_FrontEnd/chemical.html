@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Chemical Page</title>
+</head>
+<body>
+
+    <!--Add new chemical-->
+    <h1>Add Chemical</h1>
+    <form id = "form_AddChemical">
+        Chemical Name: </br>
+        <input type = "text" name = "chemicalName" id = "chemicalName"> </br></br>
+        Chemical Formula: </br>
+        <input type = "text" name = "chemicalFormula" id = "chemicalFormula"> </br></br>
+        Molecular Weight: </br>
+        <input type = "number" name = "molecularWeight" id = "molecularWeight"> </br></br>
+        <input type = "submit" value = "Submit" id = "submit_addChemical">
+    </form></br>
+
+    <!--Search chemical in database based on chemical name or chemical formula-->
+    <h1>Chemical Search</h1>
+    <form id = "form_AddContainer">
+        Chemical Name: </br>
+        <input type = "text" name = "searchName" id = "searchName"> </br></br>
+        Chemical Formula: </br>
+        <input type = "text" name = "searchFormula" id = "searchFormula"></br></br>
+        <input type = "submit" value = "Submit" id = "submit_addContainer">
+    </form></br>
+
+    <h1>Chemical Inventory</h1>
+    <!--Example table-->
+    <table id = "table_chemicalInventory" border = 1px solid black>
+        <tr>
+            <th>Chemical ID</th>
+            <th>Chemical Name</th>
+            <th>Chemical Formula</th> 
+            <th>Molecular Weight</th>
+        </tr> 
+        <tr>
+            <td>Chemical 1</td>
+            <td>Acetic acid</td>
+            <td>CH3COOH</td>
+            <td>60.052</td>
+        </tr>
+        <tr>
+            <td>Chemical 2</td>
+            <td>Acetone</td>
+            <td>CH3COCH3</td>
+            <td>58.080</td>
+        </tr>
+    </table></br>
+
+    <a href = "index.html">Home</a>
+
+</body>
+</html>

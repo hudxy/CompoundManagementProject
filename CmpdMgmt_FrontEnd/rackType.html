@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rack Type Page</title>
+</head>
+<body>
+
+
+        
+    <h1>Add Rack Type</h1>
+    <form id = "form_AddRackType">
+        Rack Type Name: </br>
+        <input type = "text" name = "rackTypeName" id = "rackTypeName"> </br></br>
+        Max Capacity: </br>
+        <input type = "number" name = "maxCapacity" id = "maxCapacity"> </br></br>
+        Allowed Labware Type: </br>
+        <select name="labwareType">
+                <option value="ContainerTypeOne">Container Type One</option>
+                <option value="ContainerTypeTwo">Container Type Two</option>
+        </select> </br></br>
+        <input type = "submit" value = "Submit" id = "submit_addRackType">
+        
+    </form></br>
+
+    <h1>Registered Rack Types</h1>
+    <!--Example table-->
+    <table id = "table_rackType" border = 1px solid black>
+        <tr>
+            <th>Rack Type ID</th>
+            <th>Rack Type Name</th>
+            <th>Max Capacity</th>
+            <th>Allowed Labware Type</th>
+        </tr> 
+        <tr>
+            <td>1</td>
+            <td>1 ML VIAL RACK</td>
+            <td>96</td>
+            <td>1 ML VIAL</td> 
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>4 ML VIAL RACK</td>
+            <td>24</td>
+            <td>4 ML VIAL</td> 
+        </tr>
+    </table></br>
+
+    <a href = "index.html">Home</a>
+
+</body>
+</html>
